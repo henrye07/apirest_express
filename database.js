@@ -7,7 +7,7 @@ const sequelize = new Sequelize('apirest_express','root','',{
 })
 
 const User = require('./models/user')(sequelize, DataTypes)
-
+const Categoria = require('./models/categoria')(sequelize, DataTypes)
 
 sequelize.sync()
                 .then(()=>{console.log('Sync')})
@@ -15,5 +15,6 @@ sequelize.sync()
 
 
 module.exports={
-    User
+    User,
+    Categoria
 }
